@@ -149,3 +149,14 @@ $(arg prefix)joint_7_velocity_controller:
         i: 1.0
         d: 1000.0
     type: velocity_controllers/JointVelocityController
+
+$(arg prefix)joint_group_vel_controller:
+    joints:
+        - $(arg prefix)joint_1
+        - $(arg prefix)joint_2
+        - $(arg prefix)joint_3
+        - $(arg prefix)joint_4
+        - $(arg prefix)joint_5
+        - $(arg prefix)joint_6
+        - $(arg prefix)joint_7
+    type: velocity_controllers/JointGroupVelocityController
